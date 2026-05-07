@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты — Максим Леонтьев</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-head">
+        <div class="wrap head-row">
+            <label class="switch" aria-label="Сменить тему">
+                <input type="checkbox" class="switch-input">
+                <span class="switch-track">
+                    <span class="switch-knob"></span>
+                </span>
+            </label>
+            <a href="index.html" class="brand">
+                <span class="brand-mark">М</span>
+                <span class="brand-name">Леонтьев<small>Репетитор</small></span>
+            </a>
+            <nav class="menu">
+                <a href="index.html" class="menu-link">Главная</a>
+                <a href="services.html" class="menu-link">Услуги</a>
+                <a href="reviews.html" class="menu-link">Отзывы</a>
+                <a href="contacts.html" class="menu-link is-active">Контакты</a>
+            </nav>
+            <a href="contacts.html" class="btn btn-primary btn-sm head-cta">Записаться</a>
+            <button class="menu-toggle" aria-label="Меню">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <section class="page-banner">
+        <div class="wrap">
+            <h1>Связаться со мной</h1>
+            <p>Запишитесь на бесплатное пробное занятие</p>
+        </div>
+    </section>
+
+    <section class="contact-page">
+        <div class="wrap contact-row">
+            <div class="contact-info">
+                <h2>Как со мной связаться</h2>
+                <p class="contact-lead">Отвечаю в течение часа в рабочее время. Самый быстрый способ — Telegram или WhatsApp.</p>
+
+                <ul class="contact-list">
+                    <li>
+                        <span class="contact-list-icon">📞</span>
+                        <div>
+                            <strong>Телефон</strong>
+                            <a href="tel:+79627030192">+7 (962) 703-01-92</a>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="contact-list-icon">✉️</span>
+                        <div>
+                            <strong>Почта</strong>
+                            <a href="mailto:maksimleontev771@gmail.com">maksimleontev771@gmail.com</a>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="contact-list-icon">TG</span>
+                        <div>
+                            <strong>Telegram</strong>
+                            <a href="https://t.me/lentiyyy" target="_blank">@lentiyyy</a>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="contact-list-icon">WA</span>
+                        <div>
+                            <strong>WhatsApp</strong>
+                            <a href="https://wa.me/79627030192" target="_blank">+7 (962) 703-01-92</a>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="contact-list-icon">📍</span>
+                        <div>
+                            <strong>Город</strong>
+                            <span>Санкт-Петербург</span>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="contact-list-icon">⏰</span>
+                        <div>
+                            <strong>Время работы</strong>
+                            <span>Пн–Сб, 10:00 – 21:00</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <form class="booking" onsubmit="return handleForm(event)">
+                <h2>Записаться на занятие</h2>
+                <p class="booking-lead">Заполните форму, и я свяжусь с вами в ближайшее время</p>
+
+                <label>
+                    <span>Ваше имя <em>*</em></span>
+                    <input type="text" name="name" required placeholder="Иван Иванов">
+                </label>
+                <label>
+                    <span>Телефон <em>*</em></span>
+                    <input type="tel" name="phone" required placeholder="+7 (962) 703-01-92">
+                </label>
+                <label>
+                    <span>Класс ученика</span>
+                    <select name="class">
+                        <option>5 класс</option>
+                        <option>6 класс</option>
+                        <option>7 класс</option>
+                        <option>8 класс</option>
+                        <option>9 класс — ОГЭ</option>
+                        <option>10 класс</option>
+                        <option>11 класс — ЕГЭ</option>
+                    </select>
+                </label>
+                <label>
+                    <span>Цель занятий</span>
+                    <select name="goal">
+                        <option>Подтянуть школьную программу</option>
+                        <option>Подготовка к ОГЭ</option>
+                        <option>Подготовка к ЕГЭ (база)</option>
+                        <option>Подготовка к ЕГЭ (профиль)</option>
+                        <option>Помощь с домашними заданиями</option>
+                        <option>Другое</option>
+                    </select>
+                </label>
+                <label>
+                    <span>Комментарий</span>
+                    <textarea name="message" rows="4" placeholder="Расскажите о текущем уровне, проблемах с математикой..."></textarea>
+                </label>
+                <label class="agree">
+                    <input type="checkbox" required>
+                    <span>Согласен на обработку персональных данных</span>
+                </label>
+                <button type="submit" class="btn btn-primary btn-block">Отправить заявку</button>
+                <p class="booking-status" id="formStatus"></p>
+            </form>
+        </div>
+    </section>
+
+    <footer class="site-foot">
+        <div class="wrap foot-row">
+            <div>
+                <div class="brand">
+                    <span class="brand-mark">М</span>
+                    <span class="brand-name">Леонтьев<small>Репетитор</small></span>
+                </div>
+                <p class="foot-about">Максим Леонтьев — репетитор по математике для школьников и абитуриентов в Санкт-Петербурге.</p>
+            </div>
+            <div>
+                <h4>Меню</h4>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="services.html">Услуги</a></li>
+                    <li><a href="reviews.html">Отзывы</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Контакты</h4>
+                <ul>
+                    <li>+7 (962) 703-01-92</li>
+                    <li>maksimleontev771@gmail.com</li>
+                    <li>Telegram: @lentiyyy</li>
+                </ul>
+            </div>
+        </div>
+        <div class="wrap foot-bottom">
+            <p>&copy; 2026 Максим Леонтьев — Репетитор по математике. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
